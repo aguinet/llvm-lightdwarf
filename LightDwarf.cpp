@@ -134,6 +134,18 @@ struct LightDwarf: public ModulePass
     for (BasicBlock &BB : F) {
       for (auto II = BB.begin(), End = BB.end(); II != End;) {
         Instruction &I = *II++; // We may delete the instruction, increment now.
+        if (auto* DVI = dyn_cast<DbgValueInst>(&I)) {
+          // We keep these, otherwise llvm won't emit debug infos for function parameters!
+          if (isa<Argument>(DVI->getValue())) {
+            continue;
+          }
+        }
+        else
+        if (isa<ReturnInst>(&I)) {
+          // We should not process return instructions, otherwise we got the same issue as above (!!)
+          continue;
+        }
+
         if (isa<DbgInfoIntrinsic>(&I)) {
           I.eraseFromParent();
           Changed = true;

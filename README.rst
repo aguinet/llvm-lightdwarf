@@ -44,11 +44,12 @@ On my system (Debian Linux x64), this gives:
 .. code::
 
   Original
-  -rwxr-xr-x 1 aguinet aguinet 735K Mar  3 15:20 build_org/libarchive/libarchive.so.16
-  -rwxr-xr-x 1 aguinet aguinet 1.8M Mar  3 15:20 build_org/libarchive/libarchive.so.16.debug
+  -rwxr-xr-x 1 aguinet aguinet 727K Mar  8 21:26 build_org/libarchive/libarchive.so.16
+  -rwxr-xr-x 1 aguinet aguinet 1.8M Mar  8 21:26 build_org/libarchive/libarchive.so.16.debug
   Light
-  -rwxr-xr-x 1 aguinet aguinet 735K Mar  3 15:20 build_light/libarchive/libarchive.so.16
-  -rwxr-xr-x 1 aguinet aguinet 425K Mar  3 15:20 build_light/libarchive/libarchive.so.16.debug
+  -rwxr-xr-x 1 aguinet aguinet 727K Mar  8 21:26 build_light/libarchive/libarchive.so.16
+  -rwxr-xr-x 1 aguinet aguinet 536K Mar  8 21:26 build_light/libarchive/libarchive.so.16.debug
+
 
 where ``*.so`` files are stripped from debug informations, and ``*.debug`` files represent only the debug informations.
 
@@ -64,10 +65,10 @@ On my system (Debian Linux x64), this gives:
 .. code::
 
   Original
-  -rwxr-xr-x 1 aguinet aguinet  99K Mar  3 15:18 build_org/libz.so.1.2.11
-  -rwxr-xr-x 1 aguinet aguinet 162K Mar  3 15:18 build_org/libz.so.1.2.11.debug
+  -rwxr-xr-x 1 aguinet aguinet  99K Mar  8 21:27 build_org/libz.so.1.2.11
+  -rwxr-xr-x 1 aguinet aguinet 161K Mar  8 21:27 build_org/libz.so.1.2.11.debug
   Light
-  -rwxr-xr-x 1 aguinet aguinet 99K Mar  3 15:18 build_light/libz.so.1.2.11
-  -rwxr-xr-x 1 aguinet aguinet 39K Mar  3 15:18 build_light/libz.so.1.2.11.debug
- 
+  -rwxr-xr-x 1 aguinet aguinet 99K Mar  8 21:27 build_light/libz.so.1.2.11
+  -rwxr-xr-x 1 aguinet aguinet 61K Mar  8 21:27 build_light/libz.so.1.2.11.debug
+
 where ``*.so`` files are stripped from debug informations, and ``*.debug`` files represent only the debug informations.
